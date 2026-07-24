@@ -2,14 +2,6 @@
 
 Researchora is a frontend-first research and knowledge-sharing platform built with Next.js. It brings research discovery, publishing, discussion, reading history, following, and AI-assisted exploration into one polished experience.
 
-## Permission Required
-
-This repository is proprietary and is provided for review or evaluation only. No license or permission is granted to use, copy, modify, distribute, publish, sublicense, or deploy any part of this repository.
-
-You must obtain explicit written permission from the repository owner before using this code or any included assets in any project, product, service, or deployment. Please contact the repository owner through the channel where you received this repository to request permission.
-
-All rights are reserved. Without written permission, do not use this repository beyond viewing it for evaluation.
-
 ## Core Features
 
 - **Research discovery:** Browse a focused home experience for research content and community activity.
