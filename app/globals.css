@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg: #020617;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --panel: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow: 0 30px 80px rgba(15, 23, 42, 0.25);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f8fafc;
+  --text: #020617;
+  --muted: #475569;
+  --panel: rgba(255, 255, 255, 0.7);
+  --border: rgba(15, 23, 42, 0.1);
+  --shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  background-image: radial-gradient(circle at top left, rgba(99, 102, 241, 0.24), transparent 28%), radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.16), transparent 24%);
+  font-family: var(--font-inter), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.35);
+  color: white;
+}
+
+@layer components {
+  .glass-panel {
+    border: 1px solid var(--border);
+    background: var(--panel);
+    backdrop-filter: blur(24px);
+    box-shadow: var(--shadow);
+    border-radius: 1.5rem;
+  }
+
+  .section-shell {
+    @apply mx-auto max-w-7xl px-6 lg:px-8;
+  }
+}
