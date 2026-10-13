@@ -89,7 +89,8 @@ function AIAssistantContent() {
         setInput('');
         setLoading(true);
         try {
-            const response = await fetch('/api/ai-assistant', {
+            // fetch() does not add the base path the way <Link> does, so it is added here.
+            const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/api/ai-assistant`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

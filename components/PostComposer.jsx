@@ -53,7 +53,8 @@ export function PostComposer() {
             return;
         }
         setSubmitting(true);
-        const response = await fetch('/api/posts', {
+        // fetch() does not add the base path the way <Link> does, so it is added here.
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/api/posts`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
